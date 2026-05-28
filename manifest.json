@@ -1,0 +1,11 @@
+{
+  "id": "novel-assistant",
+  "name": "InkPilot",
+  "version": "1.0.0",
+  "minAppVersion": "1.0.0",
+  "description": "AI co-pilot for novel writing — structured project management, chapter generation, consistency checking, and AI-taste detection. AI writes 80%, you inject the soul.",
+  "author": "NicholasYu",
+  "authorUrl": "https://github.com/nicholasyu",
+  "fundingUrl": "",
+  "isDesktopOnly": false
+}
