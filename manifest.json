@@ -1,7 +1,7 @@
 {
   "id": "inkpilot",
   "name": "InkPilot",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "minAppVersion": "1.4.0",
   "description": "Generate novels with AI assistance. Manage characters, foreshadowing, worldbuilding, and outlines. AI writes 80%, you inject the soul.",
   "author": "NicholasYu",

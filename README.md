@@ -1,3 +1,274 @@
+# InkPilot — AI Co-pilot for Novel Writing
+
+> AI is the amplifier, not the voice. You have 30 points of writing skill, InkPilot amplifies it to 85+.
+
+An Obsidian plugin designed for novelists, integrating AI capabilities to provide end-to-end writing assistance — from project planning, character design, and outline generation to chapter writing and consistency review.
+
+## Design Philosophy
+
+InkPilot's core philosophy is **"AI 80% + Human 20%"** — AI handles the heavy lifting like expanding, polishing, and scene filling, while you focus on core creativity, emotional depth, and de-AI-ifying the text. **AI is the amplifier, not the voice.**
+
+### Why Not "Pure AI Novel Writing"?
+
+Pure AI-generated novels have three fatal problems:
+
+- **AI-flavored text** — Uniform sentence structures, even修辞, "correct" emotions, smooth transitions. Readers can increasingly spot it.
+- **Long-form collapse** — After 100 chapters: contradictions, character OOC, forgotten foreshadowing.
+- **Copyright risk** — Pure AI-generated content may not be copyright-protected in many jurisdictions.
+
+### Our Approach
+
+InkPilot is built around human-AI collaboration:
+
+| Phase | AI Does | You Do |
+|-------|---------|--------|
+| **Planning** | Generate drafts of characters, foreshadowing, worldbuilding, outlines | Select, adjust, inject core creativity |
+| **Writing** | Expand scenes, fill dialogue, polish prose | Control pacing, inject emotion, design twists |
+| **Review** | Detect contradictions and AI-flavored traces | Decide which suggestions to accept, make final calls |
+| **Iteration** | Rewrite, expand, continue based on instructions | Set direction, review quality, inject soul |
+
+### Tool Positioning
+
+InkPilot is not a "one-click novel generator" — it's a **writing workbench**:
+
+- 📋 **Structured project management** — Characters, foreshadowing, worldbuilding, and outlines managed in separate modules. No long-form collapse.
+- 🤖 **AI-assisted, not AI-replaced** — AI participates in every phase, but final decisions are yours.
+- 🔍 **Quality control** — Consistency checking + AI-taste detection ensures output quality.
+- 💰 **Cost transparency** — Precise token usage and cost tracking with configurable rates.
+
+## Features
+
+### Project Management
+- Create and manage multiple novel projects
+- Project-level independent folder structure
+- AI-optimized project descriptions
+- Knowledge base management (upload reference materials, AI extracts writing knowledge)
+
+### Character Management
+- Manually create characters (protagonist/supporting/antagonist/cameo)
+- AI one-click character generation
+- AI-optimized character descriptions
+
+### Foreshadowing Tracking
+- Record foreshadowing placement chapters and resolution status
+- AI one-click foreshadowing generation
+- Visual status indicators (🚩 unresolved / ✅ resolved)
+
+### Worldbuilding
+- Category-based management (power systems, geography, factions, history, etc.)
+- AI one-click worldbuilding framework generation (selectable categories)
+- AI-optimized setting content
+
+### Chapter Outlines
+- Create and manage chapter outlines
+- AI one-click outline generation
+- AI outline expansion
+
+### Chapter Generation
+- AI streaming chapter generation (real-time display)
+- Multiple writing modes: generate, continue, rewrite, expand
+- Brainstorming feature
+- Conversational editing (adjust content via chat commands)
+- Generation history management
+
+### Chapter Review
+- AI consistency checking (detect contradictions with previous chapters)
+- AI-taste detection (identify AI-generated traces)
+- Accept/reject suggestions individually
+
+### Other Features
+- **Multi-provider AI support**: OpenAI, Anthropic, custom API
+- **Streaming output**: Real-time AI content display
+- **Cost tracking**: Precise token usage and cost statistics (configurable rates)
+- **Editor integration**: Right-click menu for AI rewrite/expand/continue
+- **Keyboard shortcuts**: `Ctrl/Cmd+Shift+G` generate, `Ctrl/Cmd+Shift+R` review, `Ctrl/Cmd+Shift+B` brainstorm
+
+## Installation
+
+### From Obsidian Community Plugins (Recommended)
+
+1. Open Obsidian → Settings → Community plugins → Browse
+2. Search for **InkPilot**
+3. Click Install and Enable
+
+### From GitHub Release
+
+1. Go to the [Releases page](https://github.com/Nicholas-Yu/InkPilot/releases) and download the latest version
+2. Download these 3 files:
+   - `main.js`
+   - `manifest.json`
+   - `styles.css`
+3. Create the plugin directory in your Obsidian Vault:
+   ```
+   YourVault/.obsidian/plugins/inkpilot/
+   ```
+4. Place the 3 files in that directory
+5. Open Obsidian → Settings → Community plugins → Find **InkPilot** and enable
+
+### From Source
+
+```bash
+# Clone the repository
+git clone https://github.com/Nicholas-Yu/InkPilot.git
+
+# Enter the project directory
+cd InkPilot
+
+# Install dependencies
+npm install
+
+# Build
+npm run build
+
+# Create plugin directory and copy files
+# macOS/Linux:
+mkdir -p /path/to/your/vault/.obsidian/plugins/inkpilot
+cp main.js manifest.json styles.css /path/to/your/vault/.obsidian/plugins/inkpilot/
+
+# Windows:
+mkdir C:\path\to\your\vault\.obsidian\plugins\inkpilot
+copy main.js manifest.json styles.css C:\path\to\your\vault\.obsidian\plugins\inkpilot\
+```
+
+### Development Mode
+
+```bash
+npm run dev
+```
+
+Development mode generates build output with sourcemaps for easier debugging.
+
+## Configuration
+
+After installation, find **InkPilot** in Obsidian Settings:
+
+1. **API Settings**
+   - API Provider: Choose OpenAI / Anthropic / Custom
+   - API Key: Enter your API key
+   - Custom API Base: Custom API endpoint (for proxies or compatible interfaces)
+
+2. **Model Settings**
+   - Outline model: For generating outlines, characters, foreshadowing, and other structured content
+   - Writing model: For generating chapter text
+   - Review model: For consistency checking and AI-taste detection
+   - Each model can be independently configured with temperature, max tokens, and context length
+
+3. **Cost Tracking**
+   - Enable/disable cost statistics
+   - Configurable rates per model ($/million tokens)
+   - View cumulative token usage and costs
+
+4. **Writing Style**
+   - Preset styles: Serious literature, Light humor, Action-packed, Mystery/Thriller
+   - Custom style description
+
+## Quick Start
+
+1. Open the InkPilot panel in the sidebar (pencil icon)
+2. Create a new novel project in the "Projects" tab
+3. Edit the project description (synopsis, worldbuilding, etc.) — AI needs this information to generate content
+4. Use each module in sequence:
+   - **Characters** → Create or AI-generate characters
+   - **Foreshadowing** → Plan foreshadowing threads
+   - **Worldbuilding** → Build your setting system
+   - **Outlines** → Plan chapter structure
+   - **Generate** → AI writes chapters
+   - **Review** → Check consistency
+
+### Knowledge Base
+
+Click the "📚 Knowledge Base" button on a project card:
+1. Select files to upload (supports .md/.txt, batch upload)
+2. Files are immediately stored in the project directory
+3. Click 🤖 to AI-extract a single file, or "Extract All" for batch processing
+4. Extracted knowledge is used as context reference during writing
+
+### Editor Integration
+
+Select text in the editor and right-click for quick access:
+- ✨ AI Rewrite selected text
+- 📝 AI Expand selected text
+- 📖 AI Continue writing
+
+## Project Structure
+
+```
+inkpilot/
+├── src/
+│   ├── main.js                    # Plugin entry
+│   ├── api/
+│   │   ├── aiClient.js            # AI API call wrapper
+│   │   └── aiManager.js           # AI business logic manager
+│   ├── services/
+│   │   └── novelService.js        # File system operations
+│   ├── utils/
+│   │   ├── promptTemplates.js     # AI prompt templates
+│   │   ├── helpers.js             # Utility functions
+│   │   ├── jsonParser.js          # JSON parser
+│   │   ├── cache.js               # Cache manager
+│   │   └── logger.js              # Logger utility
+│   └── components/
+│       ├── NovelAIWorkspaceView.js # Main view
+│       ├── NovelAISettingTab.js    # Settings page
+│       ├── Create*Modal.js         # Various creation modals
+│       ├── shared/                 # Shared components
+│       │   ├── AIGenerate.js       # AI one-click generation logic
+│       │   ├── OptimizePanel.js    # AI optimization panel
+│       │   ├── ProjectSelector.js  # Project selector
+│       │   └── SuggestionCards.js  # Suggestion card component
+│       └── tabs/                   # Tab modules
+│           ├── ProjectsTab.js      # Project management
+│           ├── CharactersTab.js    # Character management
+│           ├── ForeshadowingTab.js # Foreshadowing tracking
+│           ├── WorldSettingsTab.js # Worldbuilding
+│           ├── OutlinesTab.js      # Outline management
+│           ├── GenerateTab.js      # Chapter generation
+│           └── ReviewTab.js        # Chapter review
+├── templates/                      # Note templates
+├── styles.css                      # Stylesheet
+├── manifest.json                   # Obsidian plugin manifest
+└── package.json
+```
+
+## File Storage Structure
+
+The plugin creates the following directory structure in your vault:
+
+```
+novel/
+├── templates/           # Note templates
+└── projects/
+    └── {project-name}/
+        ├── {project-name}.md  # Project main file
+        ├── characters/        # Character files
+        ├── foreshadowings/    # Foreshadowing files
+        ├── worldsettings/     # Worldbuilding files
+        ├── outlines/          # Outline files
+        ├── chapters/          # Chapter files
+        └── knowledge/         # Knowledge base files
+```
+
+## Tech Stack
+
+- **Runtime**: Obsidian Plugin API
+- **Build Tool**: esbuild
+- **Language**: JavaScript (ES2018)
+- **AI Interface**: OpenAI / Anthropic / Compatible API
+
+## License
+
+MIT License
+
+## Contributing
+
+Issues and Pull Requests are welcome!
+
+## Acknowledgments
+
+Thanks to the Obsidian team for providing an excellent note-taking platform and plugin system.
+
+---
+
 # InkPilot（墨航）— AI 协作小说写作助手
 
 > AI 是扩音器，不是发声器。你有 30 分的写作能力，InkPilot 帮你放大到 85 分+。
@@ -86,8 +357,6 @@ InkPilot 不是"一键生成小说"的工具，而是一个**写作工作台**�
 ## 安装
 
 ### 从 Obsidian 社区插件安装（推荐）
-
-> 插件审核通过后可用
 
 1. 打开 Obsidian → 设置 → 第三方插件 → 社区插件市场
 2. 搜索 **InkPilot**
@@ -193,71 +462,6 @@ npm run dev
 - ✨ AI改写选中文字
 - 📝 AI扩写选中文字
 - 📖 AI续写
-
-## 项目结构
-
-```
-inkpilot/
-├── src/
-│   ├── main.js                    # 插件入口
-│   ├── api/
-│   │   ├── aiClient.js            # AI API 调用封装
-│   │   └── aiManager.js           # AI 业务逻辑管理
-│   ├── services/
-│   │   └── novelService.js        # 文件系统操作服务
-│   ├── utils/
-│   │   ├── promptTemplates.js     # AI 提示词模板
-│   │   ├── helpers.js             # 工具函数
-│   │   ├── jsonParser.js          # JSON 解析器
-│   │   ├── cache.js               # 缓存管理
-│   │   └── logger.js              # 日志工具
-│   └── components/
-│       ├── NovelAIWorkspaceView.js # 主视图
-│       ├── NovelAISettingTab.js    # 设置页面
-│       ├── Create*Modal.js         # 各类创建弹窗
-│       ├── shared/                 # 共享组件
-│       │   ├── AIGenerate.js       # AI 一键生成通用逻辑
-│       │   ├── OptimizePanel.js    # AI 优化面板
-│       │   ├── ProjectSelector.js  # 项目选择器
-│       │   └── SuggestionCards.js  # 建议卡片组件
-│       └── tabs/                   # 标签页模块
-│           ├── ProjectsTab.js      # 项目管理
-│           ├── CharactersTab.js    # 角色管理
-│           ├── ForeshadowingTab.js # 伏笔追踪
-│           ├── WorldSettingsTab.js # 世界观设定
-│           ├── OutlinesTab.js      # 大纲管理
-│           ├── GenerateTab.js      # 章节生成
-│           └── ReviewTab.js        # 章节审查
-├── templates/                      # 笔记模板
-├── styles.css                      # 样式文件
-├── manifest.json                   # Obsidian 插件清单
-└── package.json
-```
-
-## 文件存储结构
-
-插件在 vault 中创建以下目录结构：
-
-```
-novel/
-├── templates/           # 笔记模板
-└── projects/
-    └── {项目名}/
-        ├── {项目名}.md  # 项目主文件
-        ├── characters/  # 角色文件
-        ├── foreshadowings/ # 伏笔文件
-        ├── worldsettings/  # 世界观设定
-        ├── outlines/    # 大纲文件
-        ├── chapters/    # 章节文件
-        └── knowledge/   # 知识库文件
-```
-
-## 技术栈
-
-- **运行时**：Obsidian Plugin API
-- **构建工具**：esbuild
-- **语言**：JavaScript (ES2018)
-- **AI 接口**：OpenAI / Anthropic / 兼容 API
 
 ## 许可证
 
