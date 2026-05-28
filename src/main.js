@@ -62,7 +62,7 @@ class InkPilotPlugin extends obsidian.Plugin {
     });
 
     this.addCommand({
-      id: 'open-inkpilot',
+      id: 'open',
       name: '打开 InkPilot',
       callback: () => {
         this.activateView();
@@ -70,7 +70,7 @@ class InkPilotPlugin extends obsidian.Plugin {
     });
 
     this.addCommand({
-      id: 'inkpilot-generate',
+      id: 'generate',
       name: '生成章节',
       hotkeys: [{ modifiers: ['Mod', 'Shift'], key: 'G' }],
       callback: () => {
@@ -83,7 +83,7 @@ class InkPilotPlugin extends obsidian.Plugin {
     });
 
     this.addCommand({
-      id: 'inkpilot-review',
+      id: 'review',
       name: '审查章节',
       hotkeys: [{ modifiers: ['Mod', 'Shift'], key: 'R' }],
       callback: () => {
@@ -96,7 +96,7 @@ class InkPilotPlugin extends obsidian.Plugin {
     });
 
     this.addCommand({
-      id: 'inkpilot-brainstorm',
+      id: 'brainstorm',
       name: '头脑风暴',
       hotkeys: [{ modifiers: ['Mod', 'Shift'], key: 'B' }],
       callback: () => {
