@@ -9,7 +9,7 @@ const OutlinesTab = require('./tabs/OutlinesTab');
 const GenerateTab = require('./tabs/GenerateTab');
 const ReviewTab = require('./tabs/ReviewTab');
 
-const VIEW_TYPE = 'novel-assistant-workspace';
+const VIEW_TYPE = 'inkpilot-workspace';
 
 const TAB_MODULES = {
   projects: ProjectsTab,
